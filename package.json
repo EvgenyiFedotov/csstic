@@ -4,7 +4,7 @@
   "description": "Csstic это __css-in-js__ библиотека. В своем роде попытка сделать css-in-js для нативного js без привязки к [react](). Она очень похожа на [styled-components]() (был вдохновлен их подходом), метод `css` был специально взят, чтобы уже была подсветка синтаксиса.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "release": "standard-version",
     "build": "rm -fr dist && webpack -c ./webpack.common.js",
     "build:dev": "rm -fr dist && webpack -c ./webpack.dev.js"
@@ -25,9 +25,14 @@
     }
   },
   "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "babel-jest": "^27.3.0",
     "commitizen": "^4.2.4",
     "husky": "^7.0.2",
+    "jest": "^27.2.5",
+    "jest-environment-jsdom": "^27.3.0",
     "standard-version": "^9.3.1",
+    "ts-jest": "^27.0.7",
     "ts-loader": "^9.2.6",
     "uglify-js": "^3.14.2",
     "webpack": "^5.58.2",
