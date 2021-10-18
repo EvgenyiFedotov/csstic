@@ -5,5 +5,4 @@ module.exports = {
     ".(js|jsx)$": require.resolve("babel-jest"),
     ".(ts|tsx)$": require.resolve("ts-jest"),
   },
-  testEnvironment: "jest-environment-jsdom",
 };

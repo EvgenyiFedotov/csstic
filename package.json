@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "npx husky install",
-    "test": "jest",
+    "test": "npm run test:browser && npm run test:ssr",
+    "test:ssr": "jest -c jest.config.ssr.js",
+    "test:browser": "jest -c jest.config.browser.js",
     "release": "standard-version",
     "build": "rm -fr dist && webpack -c ./webpack.common.js",
     "build:dev": "rm -fr dist && webpack -c ./webpack.dev.js"
