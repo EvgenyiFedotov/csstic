@@ -1,8 +1,10 @@
-import { LengthClassNameHash } from "./types";
+import { HashLength, MaxSalt, NamespaceSelector, Prefix } from "./types";
 
 export const libName = "csstic";
-export const nsSelector = "[namespace]";
-export const nsSelectorS: string = nsSelector
+export const prefix: Prefix = "c";
+export const nsSelector: NamespaceSelector = "[namespace]";
+export const nsSelectorS: NamespaceSelector = nsSelector
   .replace(/\[/g, "\\[")
   .replace(/\]/g, "\\]");
-export const lengthClassNameHash: LengthClassNameHash = 4;
+export const hashLength: HashLength = 4;
+export const maxSalt: MaxSalt = 1000;
